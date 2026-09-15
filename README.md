@@ -1,4 +1,4 @@
-# 🩺 Chest X-ray Disease Detection using Fine-Tuned ResNet50 & Grad-CAM
+# 🩺 Chest X-ray Disease Detection using ResNet50 & Grad-CAM
 
 <div align="center">
 
@@ -6,125 +6,102 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/Keras-D00000?style=for-the-badge&logo=keras&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![IEEE](https://img.shields.io/badge/IEEE%20CE2CT-2026-6A1B9A?style=for-the-badge)
+![Research](https://img.shields.io/badge/Research-IEEE_CE2CT_2026-blueviolet?style=for-the-badge)
+![Computer Vision](https://img.shields.io/badge/Computer_Vision-Medical_Imaging-success?style=for-the-badge)
 
 ### Explainable AI for Multi-Class Chest X-ray Disease Classification
 
-**Deep Learning • Computer Vision • Medical Imaging • Explainable AI**
+*Deep Learning • Transfer Learning • Medical Imaging • Explainable AI*
 
 </div>
 
 ---
 
-## 📖 Overview
+## 📖 Project Overview
 
-This repository contains the implementation of a deep learning model for **multi-class chest X-ray disease classification** using **Transfer Learning with ResNet50** and **Grad-CAM Explainable AI**.
+This repository contains my **Bachelor of Technology Final-Year Research Project**, which focuses on detecting multiple chest diseases from chest X-ray images using **Deep Learning** and **Explainable Artificial Intelligence (XAI)**.
 
-The model classifies chest radiographs into four clinically important categories:
+A fine-tuned **ResNet50** model is used to classify chest radiographs into four disease categories, while **Grad-CAM** provides visual explanations by highlighting the lung regions responsible for predictions.
 
-- 🦠 COVID-19
-- 🌫 Lung Opacity
-- 🫁 Viral Pneumonia
-- ✅ Normal
+The project combines:
 
-The project was developed as my **Bachelor of Technology Final Year Research Project** and presented at the **2026 Second International Conference on Computer Science, Electrical, Electronics and Communication Technologies (IEEE CE2CT 2026)**.
+- 🧠 Deep Learning
+- 🩻 Computer Vision
+- 🔬 Medical Imaging
+- 🤖 Explainable AI (Grad-CAM)
 
----
-
-## 📄 Research Publication
-
-### Fine-Tuned ResNet50 for Multi-Class Chest X-ray Classification using Explainable Deep Learning
-
-**Conference:** IEEE CE2CT 2026
-
-**Venue:** Graphic Era Hill University, Bhimtal, Uttarakhand, India
-
-**Author Role**
-
-- 👨‍💻 First Author
-- 🎤 Conference Presenter
-- 📚 Accepted in IEEE CE2CT 2026 Proceedings
-- 🔬 Proceedings submitted to IEEE Xplore
-
-> DOI / IEEE Xplore link will be added after publication.
+This research work was accepted and presented at an **IEEE International Conference (CE2CT 2026)**.
 
 ---
 
-# 🎯 Research Objectives
+# 🎓 Research Publication
 
-- Develop a deep learning model for chest disease classification.
-- Improve diagnostic accuracy using Transfer Learning.
-- Compare Baseline CNN with Fine-Tuned ResNet50.
-- Integrate Grad-CAM for Explainable AI.
-- Support transparent AI-assisted medical imaging research.
+## Explainable Medical Image Classification using ResNet50 and Grad-CAM for Chest X-ray Analysis
 
----
+**Conference:** 2026 Second International Conference on Computer Science, Electrical, Electronics and Communication Technologies (**IEEE CE2CT 2026**)
 
-# 🩻 Disease Classes
+| Publication Information | Details |
+|-------------------------|---------|
+| 👨‍💻 First Author | **Aman** |
+| 🎤 Role | Conference Presenter |
+| 📍 Conference Venue | Graphic Era Hill University, Bhimtal, Uttarakhand, India |
+| 📅 Conference Year | 2026 |
+| 📚 Proceedings | Submitted to IEEE Xplore |
 
-| Disease | Description |
-|---------|-------------|
-| COVID-19 | COVID infected chest X-ray. |
-| Lung Opacity | Opacity caused by lung infection. |
-| Viral Pneumonia | Viral pneumonia chest radiograph. |
-| Normal | Healthy chest X-ray. |
+> **Status:** Accepted, Presented, and submitted for IEEE Xplore publication.
 
 ---
 
-# 📂 Dataset
+# 🎯 Problem Statement
 
-### COVID-19 Radiography Database
+Chest X-ray imaging is one of the most commonly used diagnostic tools for identifying respiratory diseases.
 
-This project uses the **COVID-19 Radiography Database** from Kaggle.
+Manual interpretation requires expert radiologists and may be time-consuming in large-scale healthcare settings.
 
-- Total Images: **21,165**
-- Number of Classes: **4**
-- Image Type: Chest X-ray
-- Image Size: **224 × 224**
+This project proposes an AI system capable of:
 
-### 📊 Dataset Distribution
-
-<p align="center">
-<img src="images/dataset_distribution.png" width="700"/>
-</p>
-
-| Class | Training | Validation | Testing | Total |
-|-------|---------:|-----------:|---------:|------:|
-| COVID-19 | 2531 | 542 | 543 | 3616 |
-| Lung Opacity | 4208 | 902 | 902 | 6012 |
-| Normal | 7134 | 1529 | 1529 | 10192 |
-| Viral Pneumonia | 941 | 202 | 202 | 1345 |
-| **Total** | **14814** | **3175** | **3176** | **21165** |
+- Detecting multiple chest diseases.
+- Improving diagnostic support.
+- Providing visual explanations using Grad-CAM.
+- Increasing transparency of AI predictions.
 
 ---
 
-# 🩻 Representative Chest X-ray Images
+# 🩻 Disease Categories
 
-The figure below shows representative chest radiographs used during model training.
+The model classifies chest X-ray images into **4 categories**.
 
-<p align="center">
-<img src="images/sample_xrays.png" width="750"/>
-</p>
-
-**Figure:** COVID-19, Lung Opacity, Viral Pneumonia and Normal chest X-ray images.
+| Class | Description |
+|-------|-------------|
+| 🦠 COVID-19 | Chest X-rays of COVID-19 infected patients |
+| 🌫 Lung Opacity | Lung opacity / infection cases |
+| 🫁 Viral Pneumonia | Viral Pneumonia infected lungs |
+| ✅ Normal | Healthy chest X-rays |
 
 ---
 
 # 🧠 Model Architecture
 
-## Fine-Tuned ResNet50
+## Transfer Learning using ResNet50
 
-The model is built using **Transfer Learning** on the pretrained ResNet50 network.
+The proposed model uses a pretrained **ResNet50** convolutional neural network initialized with **ImageNet weights**.
 
-### Pipeline
+### Model Pipeline
 
-1. Dataset preprocessing.
-2. Data augmentation.
-3. Image resizing (224×224).
-4. Transfer Learning using pretrained ImageNet weights.
-5. Fine-tuning upper ResNet50 layers.
-6. Softmax multi-class classification.
-7. Grad-CAM visualization.
+1. Chest X-ray image preprocessing.
+2. Image resizing to **224×224**.
+3. Data augmentation.
+4. Feature extraction using pretrained ResNet50.
+5. Fine-tuning upper convolution layers.
+6. Fully connected Softmax classifier.
+7. Grad-CAM visualization for explainability.
+
+### Why ResNet50?
+
+- Deep residual architecture.
+- Better feature extraction.
+- Faster convergence.
+- High performance on medical image datasets.
 
 ---
 
@@ -135,22 +112,20 @@ The model is built using **Transfer Learning** on the pretrained ResNet50 networ
 - Python
 - C++
 
-## Deep Learning
+## Deep Learning Libraries
 
 - TensorFlow
 - Keras
-- ResNet50
-- Grad-CAM
-
-## Data Processing
-
 - NumPy
 - Pandas
-- Matplotlib
-- OpenCV
-- Scikit-learn
 
-## Environment
+## Computer Vision
+
+- OpenCV
+- Matplotlib
+- Grad-CAM
+
+## Development Environment
 
 - Google Colab
 - Jupyter Notebook
@@ -159,127 +134,222 @@ The model is built using **Transfer Learning** on the pretrained ResNet50 networ
 
 ---
 
+# 📂 Dataset
+
+## COVID-19 Radiography Database
+
+Dataset Source:
+
+> COVID-19 Radiography Database (Kaggle)
+
+The dataset contains chest X-ray images collected from publicly available medical repositories.
+
+### Dataset Information
+
+| Dataset Property | Value |
+|-----------------|------:|
+| Total Images | **21,165** |
+| Disease Classes | **4** |
+| Image Type | Chest X-ray |
+| Image Size | 224 × 224 |
+
+---
+
+## 📊 Dataset Distribution
+
+The COVID-19 Radiography Database contains **21,165 chest X-ray images** divided into four disease categories.
+
+<p align="center">
+  <img src="./images/dataset_distribution.png" width="750"/>
+</p>
+
+**Figure 1.** Class-wise distribution of the COVID-19 Radiography Dataset used for training, validation, and testing.
+
+| Class | Training | Validation | Testing | Total |
+|------|---------:|-----------:|--------:|------:|
+| COVID-19 | 2,531 | 542 | 543 | 3,616 |
+| Lung Opacity | 4,208 | 902 | 902 | 6,012 |
+| Normal | 7,134 | 1,529 | 1,529 | 10,192 |
+| Viral Pneumonia | 941 | 202 | 202 | 1,345 |
+| **Total** | **14,814** | **3,175** | **3,176** | **21,165** |
+
+---
+
+## 🩻 Representative Chest X-ray Images
+
+The figure below shows representative chest radiographs used during model training.
+
+<p align="center">
+  <img src="./images/sample_xrays.png" width="700"/>
+</p>
+
+**Figure 2.** Representative chest X-ray images belonging to COVID-19, Lung Opacity, Normal, and Viral Pneumonia classes.
+
+---
+
 # 🔄 Data Preprocessing
 
-The preprocessing pipeline includes:
+The preprocessing pipeline prepares chest X-ray images before model training.
 
-- Resize images to **224 × 224**
+### Preprocessing Steps
+
+- Resize images to **224 × 224** pixels.
 - Normalize pixel values.
 - Data augmentation.
-- Random rotation.
-- Horizontal flip.
-- Zoom augmentation.
-- Train / Validation / Test split.
+- Shuffle dataset.
+- Train/Validation/Test split.
+
+### Data Augmentation
+
+- Random Rotation
+- Horizontal Flip
+- Zoom
+- Width Shift
+- Height Shift
+
+This helps improve generalization and reduce overfitting.
 
 ---
 
 # 🚀 Model Training
 
-## Training Strategy
+## Transfer Learning Strategy
 
-- Transfer Learning with ResNet50.
-- ImageNet pretrained weights.
-- Frozen base layers initially.
-- Fine-tuned upper convolution blocks.
-- Adam Optimizer.
-- Early Stopping.
-- Reduce Learning Rate on Plateau.
+The ResNet50 backbone was initialized using pretrained ImageNet weights.
 
-## Training Configuration
+### Training Procedure
+
+- Freeze pretrained convolution layers.
+- Train custom classification head.
+- Fine-tune upper ResNet layers.
+- Evaluate on unseen testing dataset.
+
+### Hyperparameters
 
 | Parameter | Value |
-|-----------|------|
-| Image Size | 224×224 |
+|-----------|------:|
+| Model | ResNet50 |
+| Input Size | 224 × 224 |
 | Batch Size | 32 |
+| Epochs | 20 |
 | Optimizer | Adam |
 | Learning Rate | 0.0001 |
 | Loss Function | Categorical Crossentropy |
-| Output Layer | Softmax (4 Classes) |
+| Output Activation | Softmax |
 
 ---
 
-# 📊 Performance Comparison
+# 📈 Model Performance
 
-The Fine-Tuned ResNet50 significantly outperformed the baseline CNN model.
+The fine-tuned ResNet50 model significantly outperformed the baseline CNN model.
 
 <p align="center">
-<img src="images/performance_comparison.png" width="600"/>
+  <img src="./images/performance_comparison.png" width="700"/>
 </p>
 
+**Figure 3.** Performance comparison between the baseline CNN model and the proposed fine-tuned ResNet50 model.
+
+## Performance Comparison
+
 | Metric | Baseline CNN | Fine-Tuned ResNet50 |
-|--------|-------------:|--------------------:|
+|-------|-------------:|--------------------:|
 | Accuracy | 77.17% | **90.00%** |
 | Precision | 0.78 | **0.90** |
 | Recall | 0.77 | **0.90** |
 | F1-Score | 0.76 | **0.90** |
 
-### Improvement
-
-- +12.83% higher accuracy.
-- Better precision and recall.
-- Better F1-score across all disease classes.
-
 ---
 
-# 📈 Class-wise Performance
+# 📊 Confusion Matrix & Classification Report
+
+The confusion matrix summarizes class-wise prediction performance on the testing dataset.
 
 <p align="center">
-<img src="images/classification_metrics.png" width="650"/>
+  <img src="./images/confusion_matrix.png" width="700"/>
 </p>
 
-| Class | Precision | Recall | F1 Score |
+**Figure 4.** Confusion Matrix and Classification Report generated by the fine-tuned ResNet50 model.
+
+## Class-wise Results
+
+| Class | Precision | Recall | F1-Score |
 |-------|----------:|-------:|---------:|
-| COVID-19 | 0.94 | 0.85 | 0.89 |
+| COVID-19 | **0.94** | 0.85 | 0.89 |
 | Lung Opacity | 0.89 | 0.84 | 0.87 |
-| Normal | 0.88 | 0.94 | 0.91 |
+| Normal | 0.88 | **0.94** | 0.91 |
 | Viral Pneumonia | **0.95** | **0.94** | **0.95** |
-| Macro Average | 0.92 | 0.89 | 0.90 |
-| Weighted Average | 0.90 | 0.90 | 0.90 |
+| **Macro Average** | **0.92** | **0.89** | **0.90** |
+| **Weighted Average** | **0.90** | **0.90** | **0.90** |
 
----
+### Overall Test Accuracy
 
-# 📊 Confusion Matrix
-
-The confusion matrix evaluates class-wise prediction performance on the test dataset.
-
-<p align="center">
-<img src="images/confusion_matrix.png" width="700"/>
-</p>
-
-### Observations
-
-- Strong prediction performance across all classes.
-- Highest recall for **Normal** and **Viral Pneumonia**.
-- Minor confusion between **COVID-19** and **Lung Opacity**.
+# **90.00%**
 
 ---
 
 # 🔥 Explainable AI using Grad-CAM
 
-Grad-CAM generates heatmaps showing the lung regions responsible for predictions.
+Deep learning models are often considered black boxes.
+
+Grad-CAM helps visualize which regions of the chest X-ray influenced the prediction.
 
 <p align="center">
-<img src="images/gradcam_visualization.png" width="750"/>
+  <img src="./images/gradcam_visualization.png" width="750"/>
 </p>
 
-### Why Grad-CAM?
+**Figure 5.** Grad-CAM heatmaps generated for representative chest X-ray images.
 
-- Improves model interpretability.
+### Benefits of Grad-CAM
+
+- Improves interpretability.
 - Highlights disease-related lung regions.
-- Makes predictions more transparent.
-- Supports Explainable AI research in medical imaging.
+- Supports explainable medical AI.
+- Makes predictions easier to understand.
+
+---
+
+# 📂 Repository Structure
+
+```text
+Chest-Xray-Disease-Detection/
+│
+├── README.md
+├── notebook/
+│   └── Chest_Xray_Disease_Detection.ipynb
+│
+├── images/
+│   ├── dataset_distribution.png
+│   ├── sample_xrays.png
+│   ├── performance_comparison.png
+│   ├── confusion_matrix.png
+│   └── gradcam_visualization.png
+│
+├── model/
+│   └── resnet50_model.h5
+│
+├── src/
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── predict.py
+│   ├── gradcam.py
+│   └── utils.py
+│
+├── requirements.txt
+├── LICENSE
+└── .gitignore
+```
 
 ---
 
 # 💻 Installation
 
-Clone the repository.
+Clone this repository.
 
 ```bash
 git clone https://github.com/amansaifi699/Chest-Xray-Disease-Detection.git
 ```
 
-Enter the project.
+Move into the project directory.
 
 ```bash
 cd Chest-Xray-Disease-Detection
@@ -295,81 +365,69 @@ pip install -r requirements.txt
 
 # ▶️ Run the Project
 
-### Train Model
+## Train Model
 
 ```bash
 python src/train.py
 ```
 
-### Evaluate Model
+## Evaluate Model
 
 ```bash
 python src/evaluate.py
 ```
 
-### Predict a Chest X-ray
+## Predict a Chest X-ray
 
 ```bash
 python src/predict.py --image sample_xray.png
 ```
 
----
+## Generate Grad-CAM Heatmap
 
-# 📁 Repository Structure
-
-```text
-Chest-Xray-Disease-Detection/
-│
-├── README.md
-├── notebook/
-│   └── Chest_Xray_Research_Notebook.ipynb
-│
-├── model/
-│   └── resnet50_covid_model.h5
-│
-├── src/
-│   ├── train.py
-│   ├── evaluate.py
-│   ├── predict.py
-│   ├── gradcam.py
-│   └── utils.py
-│
-├── images/
-│   ├── dataset_distribution.png
-│   ├── sample_xrays.png
-│   ├── performance_comparison.png
-│   ├── classification_metrics.png
-│   ├── confusion_matrix.png
-│   └── gradcam_visualization.png
-│
-├── requirements.txt
-├── LICENSE
-└── .gitignore
+```bash
+python src/gradcam.py --image sample_xray.png
 ```
 
 ---
 
-# 📌 Key Features
+# 📋 Project Features
 
 - Multi-Class Chest X-ray Classification.
-- Transfer Learning with ResNet50.
+- Transfer Learning using ResNet50.
 - Explainable AI using Grad-CAM.
-- Medical Image Preprocessing.
+- Medical Image Classification.
+- Confusion Matrix Evaluation.
 - Classification Report.
-- Confusion Matrix Visualization.
-- Research-Oriented Implementation.
+- Image Preprocessing Pipeline.
+- TensorFlow / Keras Implementation.
+
+---
+
+# 📚 Research Contributions
+
+This project demonstrates:
+
+- Multi-class medical image classification.
+- Transfer learning for healthcare applications.
+- Explainable AI for medical diagnosis.
+- Grad-CAM visualization for model transparency.
+- Performance improvement over a baseline CNN.
 
 ---
 
 # 🎓 Academic Context
 
-This project was completed during my **Bachelor of Technology in Computer Science & Engineering**.
+This research project was completed as part of my **Bachelor of Technology in Computer Science & Engineering**.
 
-**Institution:** IMS Engineering College, Ghaziabad (Affiliated to Dr. A.P.J. Abdul Kalam Technical University, AKTU)
+**Institution:** IMS Engineering College, Ghaziabad
 
-### Research Areas
+**University:** Dr. A.P.J. Abdul Kalam Technical University (AKTU)
+
+### Research Domains
 
 - Artificial Intelligence
+- Machine Learning
 - Deep Learning
 - Computer Vision
 - Medical Imaging
@@ -377,21 +435,28 @@ This project was completed during my **Bachelor of Technology in Computer Scienc
 
 ---
 
+# 🚀 Future Improvements
+
+Planned future work includes:
+
+- Vision Transformer (ViT) comparison.
+- EfficientNet implementation.
+- Multi-label disease classification.
+- Web deployment using Streamlit.
+- Docker deployment.
+- Clinical evaluation on additional datasets.
+
+---
+
 # 👨‍💻 Author
 
 ## Aman
 
-B.Tech Computer Science & Engineering
+**B.Tech Computer Science & Engineering (AKTU)**
 
-IMS Engineering College (AKTU)
+**First Author — IEEE CE2CT 2026**
 
-### Research Interests
-
-- Artificial Intelligence
-- Machine Learning
-- Computer Vision
-- Medical AI
-- Explainable AI
+AI Research Enthusiast | Computer Vision | Medical AI | Explainable AI
 
 ### Connect with Me
 
@@ -403,26 +468,26 @@ IMS Engineering College (AKTU)
 
 # 🙏 Acknowledgements
 
+Special thanks to:
+
 - TensorFlow
 - Keras
-- ResNet50 (ImageNet Pretrained Model)
+- OpenCV
+- Google Colab
 - COVID-19 Radiography Database
 - IEEE CE2CT 2026 Conference
+- IMS Engineering College
 
 ---
 
 # 📜 License
 
-This repository is released under the **MIT License** for academic and research purposes.
-
-> **Disclaimer:** This repository is intended for educational and research purposes only. It is not a clinical diagnostic tool or a substitute for professional medical advice.
+This project is released under the **MIT License** for academic and research purposes.
 
 ---
 
-<div align="center">
+## ⚠️ Disclaimer
 
-### ⭐ If you found this project useful, consider giving it a star!
+This project is intended **only for educational and research purposes**.
 
-**Built with ❤️ for AI Research and Medical Imaging**
-
-</div>
+It is **not** a clinical diagnostic tool and should **not** be used as a substitute for professional medical advice or healthcare diagnosis.
