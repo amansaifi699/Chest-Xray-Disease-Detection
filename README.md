@@ -64,3 +64,9 @@ This research implementation was presented as part of the **2026 Second Internat
 <p align="center">
   <img src="presentation_certificate.jpg" alt="CE2CT 2026 Presentation Certificate" width="900">
 </p>
+
+## Conference Presentation
+
+This work was successfully presented at the **2026 Second International Conference on Advances in Computer Science, Electrical, Electronics and Communication Technologies (CE2CT 2026)** held at Graphic Era Hill University, Bhimtal Campus, India (2–4 July 2026).
+
+The paper was accepted for conference proceedings, and the proceedings were subsequently accepted for publication in **IEEE Xplore** after IEEE's publication review process.
