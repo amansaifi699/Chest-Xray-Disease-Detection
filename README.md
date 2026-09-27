@@ -345,9 +345,7 @@ The dataset contains four pulmonary disease categories used for training and eva
   <img src="results/sample_predictions.png" width="100%" alt="Representative Chest X-ray Samples">
 </p>
 
-<p align="center">
-  <em><b>Figure 2.</b> Representative chest radiographs from the COVID-19 Radiography Database showing COVID-19, Lung Opacity, Viral Pneumonia, and Normal classes.</em>
-</p>
+
 
 ---
 
@@ -359,9 +357,7 @@ The confusion matrix summarizes class-wise prediction performance on the **3,176
   <img src="results/confusion_matrix.png" width="100%" alt="Confusion Matrix">
 </p>
 
-<p align="center">
-  <em><b>Figure 3.</b> Confusion matrix illustrating the prediction distribution across the four pulmonary disease categories.</em>
-</p>
+
 
 ### Confusion Matrix Analysis
 
@@ -380,9 +376,7 @@ To improve transparency, **Gradient-weighted Class Activation Mapping (Grad-CAM)
   <img src="results/gradcam_visualization.png" width="100%" alt="Grad-CAM Visualization">
 </p>
 
-<p align="center">
-  <em><b>Figure 4.</b> Grad-CAM heatmaps generated for representative COVID-19, Lung Opacity, Viral Pneumonia, and Normal chest X-ray images.</em>
-</p>
+
 
 ### Explainability Insights
 
