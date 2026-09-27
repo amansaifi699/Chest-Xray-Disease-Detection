@@ -43,3 +43,24 @@ The model classifies chest radiographs into four clinically relevant categories:
 
 Unlike conventional convolutional neural networks, the proposed transfer learning approach leverages pretrained ResNet50 features and provides interpretable heatmaps highlighting image regions that influence predictions. The project combines classification accuracy with explainable AI to improve transparency in medical image analysis.
 
+## Research Information
+
+| Item                   | Details                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Paper Title**        | Fine-Tuned ResNet50 for Multi-Class Chest X-ray Classification of COVID-19 and Pneumonia Using Explainable Deep Learning |
+| **Conference**         | CE2CT 2026 – Graphic Era Hill University, Bhimtal Campus, India                                                          |
+| **Publication Status** | Proceedings accepted for publication in IEEE Xplore after IEEE review                                                    |
+| **Role**               | First Author & Presenter                                                                                                 |
+| **Research Area**      | Medical AI, Computer Vision, Explainable AI                                                                              |
+
+---
+
+## 📜 Conference Presentation Certificate
+
+This research implementation was presented as part of the **2026 Second International Conference on Advances in Computer Science, Electrical, Electronics and Communication Technologies (CE2CT 2026)**.
+
+> Proceedings accepted for publication in IEEE Xplore.
+
+<p align="center">
+  <img src="images/presentation_certificate.png" width="80%" alt="CE2CT 2026 Presentation Certificate"/>
+</p>
