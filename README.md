@@ -29,3 +29,17 @@
 * **Grad-CAM** visualization for explainable medical AI.
 * Evaluated on the **COVID-19 Radiography Database** containing **21,165** chest X-ray images.
 * Accepted in the **2026 Second International Conference on Advances in Computer Science, Electrical, Electronics and Communication Technologies (CE2CT 2026)**, with proceedings accepted for publication in **IEEE Xplore**.
+
+## Overview
+
+Chest X-ray interpretation plays a crucial role in the early diagnosis of pulmonary diseases such as COVID-19 and pneumonia. This repository presents the implementation of my research project on **multi-class chest X-ray disease classification** using a **fine-tuned ResNet50** deep learning model integrated with **Gradient-weighted Class Activation Mapping (Grad-CAM)** for visual interpretability.
+
+The model classifies chest radiographs into four clinically relevant categories:
+
+* COVID-19
+* Lung Opacity
+* Viral Pneumonia
+* Normal
+
+Unlike conventional convolutional neural networks, the proposed transfer learning approach leverages pretrained ResNet50 features and provides interpretable heatmaps highlighting image regions that influence predictions. The project combines classification accuracy with explainable AI to improve transparency in medical image analysis.
+
