@@ -62,5 +62,5 @@ This research implementation was presented as part of the **2026 Second Internat
 > Proceedings accepted for publication in IEEE Xplore.
 
 <p align="center">
-  <img src="images/presentation_certificate.png" width="80%" alt="CE2CT 2026 Presentation Certificate"/>
+  <img src="presentation_certificate.jpg" alt="CE2CT 2026 Presentation Certificate" width="900">
 </p>
