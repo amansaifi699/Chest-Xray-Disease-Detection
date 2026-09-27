@@ -1,17 +1,16 @@
-<p align="centre">
-  <img src="assets/github_banner.png"
-width="100% alt="chest x-ray Disease Detection Banner">
-</p>>
+<p align="center">
+  <img src="assets/github_banner.png" width="100%" alt="Chest X-ray Disease Detection Banner">
+</p>
 # 🫁 Chest X-ray Disease Detection using Fine-Tuned ResNet50 with Explainable AI
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
-![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red?logo=pytorch)
-![Computer Vision](https://img.shields.io/badge/Computer-Vision-green)
-![Grad-CAM](https://img.shields.io/badge/XAI-GradCAM-purple)
-![Transfer Learning](https://img.shields.io/badge/Transfer-Learning-orange)
-![IEEE CE2CT 2026](https://img.shields.io/badge/IEEE-CE2CT%202026-blue)
-![License](https://img.shields.io/badge/License-MIT-success)
+<p align="center">
 
-<div align="center">
+![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow)
+![Keras](https://img.shields.io/badge/Keras-Deep_Learning-D00000?style=for-the-badge&logo=keras)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer_Vision-5C3EE8?style=for-the-badge&logo=opencv)
+![Grad-CAM](https://img.shields.io/badge/Grad--CAM-Explainable_AI-purple?style=for-the-badge)
+
+</p>
 
 ### Multi-Class Chest X-ray Classification using Transfer Learning and Grad-CAM
 
