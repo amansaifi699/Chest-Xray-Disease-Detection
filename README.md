@@ -279,110 +279,6 @@ Chest-Xray-Disease-Detection/
 
 ---
 
-# 📈 Results
-
-The proposed **Fine-Tuned ResNet50** model demonstrated a significant improvement over a baseline CNN for multi-class pulmonary disease classification. Performance was evaluated on the **COVID-19 Radiography Database** using a held-out test set containing **3,176 chest X-ray images** across four disease categories.
-
----
-
-## 🏆 Overall Model Performance
-
-| Metric        | Baseline CNN | Fine-Tuned ResNet50 |
-| ------------- | -----------: | ------------------: |
-| **Accuracy**  |       77.17% |          **90.00%** |
-| **Precision** |         0.78 |            **0.90** |
-| **Recall**    |         0.77 |            **0.90** |
-| **F1-Score**  |         0.76 |            **0.90** |
-
-> The Fine-Tuned ResNet50 achieved **90.00% classification accuracy**, outperforming the baseline CNN across all evaluation metrics through transfer learning and feature refinement.
-
----
-
-## 📊 Class-wise Performance
-
-| Disease Class        | Precision |   Recall | F1-Score |
-| -------------------- | --------: | -------: | -------: |
-| 🦠 COVID-19          |  **0.94** |     0.85 |     0.89 |
-| 🌫️ Lung Opacity     |      0.89 |     0.84 |     0.87 |
-| 🫁 Viral Pneumonia   |  **0.95** | **0.94** | **0.95** |
-| ✅ Normal             |      0.88 | **0.94** |     0.91 |
-| **Macro Average**    |  **0.92** | **0.89** | **0.90** |
-| **Weighted Average** |  **0.90** | **0.90** | **0.90** |
-
-### Key Observations
-
-* **Viral Pneumonia** achieved the highest class-wise F1-score (**0.95**).
-* **Normal** chest X-rays showed the highest recall (**0.94**).
-* COVID-19 predictions achieved **94% precision**, demonstrating reliable identification of positive COVID-19 cases.
-* Lung Opacity remained the most challenging category because of visual similarity with other pulmonary diseases.
-
----
-
-## 🩻 Representative Chest X-ray Samples
-
-The dataset contains four pulmonary disease categories used for training and evaluation.
-
-<p align="center">
-  <img src="results/sample_predictions.png" width="100%" alt="Representative Chest X-ray Samples">
-</p>
-
-
-
----
-
-## 📉 Confusion Matrix
-
-The confusion matrix summarizes class-wise prediction performance on the **3,176-image test set**.
-
-<p align="center">
-  <img src="results/confusion_matrix.png" width="100%" alt="Confusion Matrix">
-</p>
-
-
-
-### Confusion Matrix Analysis
-
-* Most **COVID-19** images were correctly classified.
-* Some **Lung Opacity** samples were misclassified as **Normal**, reflecting overlapping radiographic characteristics.
-* **Normal** chest X-rays achieved strong classification performance with minimal false positives.
-* **Viral Pneumonia** exhibited the lowest number of misclassifications among all disease categories.
-
----
-
-## 🌈 Grad-CAM Explainability
-
-To improve transparency, **Gradient-weighted Class Activation Mapping (Grad-CAM)** was applied to visualize regions influencing the model's predictions.
-
-<p align="center">
-  <img src="results/gradcam_visualization.png" width="100%" alt="Grad-CAM Visualization">
-</p>
-
-
-
-### Explainability Insights
-
-* **COVID-19:** Heatmaps focus on bilateral lung infiltrates associated with infection.
-* **Lung Opacity:** Activation concentrates around opacity regions within the lungs.
-* **Viral Pneumonia:** Grad-CAM highlights infected pulmonary regions with strong localization.
-* **Normal:** Heatmaps show diffuse activation without focusing on abnormal pathological regions.
-
-Grad-CAM provides visual evidence supporting the model's predictions, making the classification process more interpretable for medical imaging research.
-
----
-
-## 💡 Performance Summary
-
-| Model                   |   Accuracy | Precision |   Recall | F1-Score |
-| ----------------------- | ---------: | --------: | -------: | -------: |
-| Baseline CNN            |     77.17% |      0.78 |     0.77 |     0.76 |
-| **Fine-Tuned ResNet50** | **90.00%** |  **0.90** | **0.90** | **0.90** |
-
-The proposed transfer learning approach improved overall classification performance by approximately **13 percentage points** over the baseline CNN while providing explainable predictions through Grad-CAM.
-
----
-
----
-
 ## 📂 COVID-19 Radiography Database
 
 This project uses the **COVID-19 Radiography Database** developed by **Tawsifur Rahman et al.**, one of the largest publicly available chest X-ray datasets for pulmonary disease classification.
@@ -411,7 +307,7 @@ The dataset contains **21,165 chest X-ray images** divided into four disease cat
 ## 🩻 Representative Dataset Samples
 
 <p align="center">
-  <img src="sample_xrays.png" width="100%" alt="Representative Chest X-ray Dataset Samples">
+  <img src="results/sample_predictions.png" width="100%" alt="Representative Chest X-ray Dataset Samples">
 </p>
 
 | Disease Category       | Description                                                |
@@ -482,3 +378,127 @@ Data Augmentation
         ▼
 Training / Validation / Testing Split
 ```
+
+
+## 📉 Confusion Matrix
+
+The confusion matrix summarizes class-wise prediction performance on the **3,176-image test set**.
+
+<p align="center">
+  <img src="results/confusion_matrix.png" width="100%" alt="Confusion Matrix">
+</p>
+
+
+
+### Confusion Matrix Analysis
+
+* Most **COVID-19** images were correctly classified.
+* Some **Lung Opacity** samples were misclassified as **Normal**, reflecting overlapping radiographic characteristics.
+* **Normal** chest X-rays achieved strong classification performance with minimal false positives.
+* **Viral Pneumonia** exhibited the lowest number of misclassifications among all disease categories.
+
+---
+
+## 🌈 Grad-CAM Explainability
+
+To improve transparency, **Gradient-weighted Class Activation Mapping (Grad-CAM)** was applied to visualize regions influencing the model's predictions.
+
+<p align="center">
+  <img src="results/gradcam_visualization.png" width="100%" alt="Grad-CAM Visualization">
+</p>
+
+
+
+### Explainability Insights
+
+* **COVID-19:** Heatmaps focus on bilateral lung infiltrates associated with infection.
+* **Lung Opacity:** Activation concentrates around opacity regions within the lungs.
+* **Viral Pneumonia:** Grad-CAM highlights infected pulmonary regions with strong localization.
+* **Normal:** Heatmaps show diffuse activation without focusing on abnormal pathological regions.
+
+Grad-CAM provides visual evidence supporting the model's predictions, making the classification process more interpretable for medical imaging research.
+
+---
+# 📈 Results
+
+The proposed **Fine-Tuned ResNet50** model demonstrated a significant improvement over a baseline CNN for multi-class pulmonary disease classification. Performance was evaluated on the **COVID-19 Radiography Database** using a held-out test set containing **3,176 chest X-ray images** across four disease categories.
+
+---
+
+## 🏆 Overall Model Performance
+
+| Metric        | Baseline CNN | Fine-Tuned ResNet50 |
+| ------------- | -----------: | ------------------: |
+| **Accuracy**  |       77.17% |          **90.00%** |
+| **Precision** |         0.78 |            **0.90** |
+| **Recall**    |         0.77 |            **0.90** |
+| **F1-Score**  |         0.76 |            **0.90** |
+
+> The Fine-Tuned ResNet50 achieved **90.00% classification accuracy**, outperforming the baseline CNN across all evaluation metrics through transfer learning and feature refinement.
+
+---
+
+## 📊 Class-wise Performance
+
+| Disease Class        | Precision |   Recall | F1-Score |
+| -------------------- | --------: | -------: | -------: |
+| 🦠 COVID-19          |  **0.94** |     0.85 |     0.89 |
+| 🌫️ Lung Opacity     |      0.89 |     0.84 |     0.87 |
+| 🫁 Viral Pneumonia   |  **0.95** | **0.94** | **0.95** |
+| ✅ Normal             |      0.88 | **0.94** |     0.91 |
+| **Macro Average**    |  **0.92** | **0.89** | **0.90** |
+| **Weighted Average** |  **0.90** | **0.90** | **0.90** |
+
+### Key Observations
+
+* **Viral Pneumonia** achieved the highest class-wise F1-score (**0.95**).
+* **Normal** chest X-rays showed the highest recall (**0.94**).
+* COVID-19 predictions achieved **94% precision**, demonstrating reliable identification of positive COVID-19 cases.
+* Lung Opacity remained the most challenging category because of visual similarity with other pulmonary diseases.
+
+
+## 💡 Performance Summary
+
+| Model                   |   Accuracy | Precision |   Recall | F1-Score |
+| ----------------------- | ---------: | --------: | -------: | -------: |
+| Baseline CNN            |     77.17% |      0.78 |     0.77 |     0.76 |
+| **Fine-Tuned ResNet50** | **90.00%** |  **0.90** | **0.90** | **0.90** |
+
+The proposed transfer learning approach improved overall classification performance by approximately **13 percentage points** over the baseline CNN while providing explainable predictions through Grad-CAM.
+
+🔬 Research Applications
+
+Potential applications of this research include:
+
+AI-assisted pulmonary disease screening.
+COVID-19 detection from chest radiographs.
+Pneumonia classification using transfer learning.
+Explainable AI for medical imaging.
+Educational and research applications in computer vision.
+🚀 Future Work
+
+This project can be extended in several research directions:
+
+Improve classification using DenseNet121 and EfficientNet.
+Investigate Vision Transformers (ViT) for chest X-ray classification.
+Evaluate the model on external clinical datasets for better generalization.
+Deploy the model as a web application for AI-assisted medical image analysis.
+Extend explainability using Score-CAM and Integrated Gradients.
+⚠️ Medical Disclaimer
+
+This repository presents a research and educational implementation of an AI-based chest X-ray classification system.
+
+This model has not been clinically validated and must not be used for medical diagnosis, treatment decisions, or patient care.
+
+Grad-CAM visualizations are included only for explainability in medical AI research.
+
+📜 License
+
+This project is released under the MIT License for academic and research purposes.
+
+If you use this repository in your research, please cite the associated conference paper.
+
+---
+
+---
+
