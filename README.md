@@ -129,25 +129,6 @@ The repository demonstrates an end-to-end workflow including:
 
 ---
 
-# 📊 Dataset
-
-The model was trained and evaluated using the **COVID-19 Radiography Database** created by **Tawsifur Rahman et al.**
-
-**Dataset Source (Kaggle):**
-
-https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database
-
-### Dataset Distribution
-
-| Class | Training | Validation | Testing | Total |
-|-------|---------:|-----------:|--------:|------:|
-| COVID-19 | 2,531 | 542 | 543 | 3,616 |
-| Lung Opacity | 4,208 | 902 | 902 | 6,012 |
-| Normal | 7,134 | 1,529 | 1,529 | 10,192 |
-| Viral Pneumonia | 941 | 202 | 202 | 1,345 |
-| **Total** | **14,814** | **3,175** | **3,176** | **21,165** |
-
----
 
 # 🧬 Model Architecture
 
@@ -398,3 +379,106 @@ Grad-CAM provides visual evidence supporting the model's predictions, making the
 
 The proposed transfer learning approach improved overall classification performance by approximately **13 percentage points** over the baseline CNN while providing explainable predictions through Grad-CAM.
 
+---
+
+---
+
+## 📂 COVID-19 Radiography Database
+
+This project uses the **COVID-19 Radiography Database** developed by **Tawsifur Rahman et al.**, one of the largest publicly available chest X-ray datasets for pulmonary disease classification.
+
+<p align="center">
+
+[![Kaggle Dataset](https://img.shields.io/badge/Kaggle-COVID--19_Radiography_Database-20BEFF?style=for-the-badge\&logo=kaggle)](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
+
+</p>
+
+The dataset contains **21,165 chest X-ray images** divided into four disease categories.
+
+### Dataset Overview
+
+| Property             | Value                                           |
+| -------------------- | ----------------------------------------------- |
+| **Dataset Name**     | COVID-19 Radiography Database                   |
+| **Source**           | Kaggle                                          |
+| **Total Images**     | **21,165**                                      |
+| **Image Format**     | PNG                                             |
+| **Input Resolution** | 224 × 224 × 3                                   |
+| **Classes**          | COVID-19, Lung Opacity, Viral Pneumonia, Normal |
+
+---
+
+## 🩻 Representative Dataset Samples
+
+<p align="center">
+  <img src="sample_xrays.png" width="100%" alt="Representative Chest X-ray Dataset Samples">
+</p>
+
+| Disease Category       | Description                                                |
+| ---------------------- | ---------------------------------------------------------- |
+| 🦠 **COVID-19**        | Chest radiographs showing COVID-19 infection patterns.     |
+| 🌫️ **Lung Opacity**   | Images containing non-COVID pulmonary opacity regions.     |
+| 🫁 **Viral Pneumonia** | Chest X-rays with viral pneumonia infection.               |
+| ✅ **Normal**           | Healthy chest radiographs without pulmonary abnormalities. |
+
+---
+
+## 📊 Dataset Distribution
+
+| Class           |   Training | Validation |   Testing |      Total |
+| --------------- | ---------: | ---------: | --------: | ---------: |
+| COVID-19        |      2,531 |        542 |       543 |      3,616 |
+| Lung Opacity    |      4,208 |        902 |       902 |      6,012 |
+| Normal          |      7,134 |      1,529 |     1,529 |     10,192 |
+| Viral Pneumonia |        941 |        202 |       202 |      1,345 |
+| **Total**       | **14,814** |  **3,175** | **3,176** | **21,165** |
+
+The dataset was divided into **training, validation, and testing subsets** while preserving class distribution across all four disease categories.
+
+---
+
+## 🧹 Image Preprocessing Pipeline
+
+Before training, each chest X-ray image undergoes the following preprocessing pipeline:
+
+| Step                    | Purpose                                      |
+| ----------------------- | -------------------------------------------- |
+| Resize to **224 × 224** | Matches the ResNet50 input resolution.       |
+| RGB Conversion          | Converts grayscale images to 3-channel RGB.  |
+| Pixel Normalization     | Scales pixel values between 0 and 1.         |
+| Data Augmentation       | Improves robustness and reduces overfitting. |
+
+### Data Augmentation
+
+The following augmentation techniques were applied during training:
+
+* Random Rotation (±15°)
+* Horizontal Flip
+* Zoom Augmentation
+* Brightness Adjustment
+* Width & Height Shift
+
+These augmentations improve model generalization while preserving clinically relevant anatomical structures.
+
+---
+
+## 🔄 Data Preparation Workflow
+
+```text
+Chest X-ray Images
+        │
+        ▼
+Resize (224×224)
+        │
+        ▼
+RGB Conversion
+        │
+        ▼
+Pixel Normalization
+        │
+        ▼
+Data Augmentation
+        │
+        ▼
+Training / Validation / Testing Split
+```
